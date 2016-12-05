@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/txt_name"
+        android:layout_weight="1"
+        tools:text="modul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/txt_credits_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="credits"
+        android:layout_weight="1"/>
+
+    <TextView
+        android:id="@+id/txt_grade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="grade"
+        android:layout_weight="1"/>
+
+    <TextView
+        android:id="@+id/txt_gewichtung"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="gewichtung"
+        android:layout_weight="1"/>
+
+    <TextView
+        android:id="@+id/txt_calculated"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="gerechnet"
+        android:layout_weight="1"/>
+
+</LinearLayout>
