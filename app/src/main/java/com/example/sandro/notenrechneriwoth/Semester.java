@@ -9,6 +9,7 @@ import java.util.ArrayList;
 public class Semester {
 
     private String name;
+    private ArrayList<Module> moduleList = new ArrayList<Module>();
 
     public Semester(String name) {
         //Add every new semester to the all semester list
@@ -18,5 +19,13 @@ public class Semester {
 
     public String getName() {
         return name;
+    }
+
+    public void addModuleToSemester(Module module) {
+        this.moduleList.add(module);
+    }
+
+    public ArrayList<Module> getModuleList() {
+        return moduleList;
     }
 }

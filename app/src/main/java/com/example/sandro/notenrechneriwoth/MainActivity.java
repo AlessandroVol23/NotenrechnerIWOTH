@@ -37,17 +37,40 @@ public class MainActivity extends AppCompatActivity {
         semesterList.add(s6);
         semesterList.add(s7);
 
-
-        //Create Adapter
+        //Create Adapter for Semester Activity
         SemesterAdapter adapter = new SemesterAdapter(this, semesterList);
 
+        //Get the List View to set the adapter
         ListView listview = (ListView) findViewById(R.id.list_view_main);
         listview.setAdapter(adapter);
 
+
+
+        //Create modules for semester one
+        Module gwi = new Module("Grundlagen der Wirtschaftsinformatik", 8, 1);
+        Module pg1 = new Module("Programmieren1", 8, 1);
+        Module ma1 = new Module("Mathe1", 7, 1);
+        Module englisch = new Module("Fachspezifisches Englisch", 3, 0.5);
+        Module bwl1 = new Module("BWL1", 5, 1);
+
+        //Add modules to list in semester
+        //Semester one
+        s1.addModuleToSemester(gwi);
+        s1.addModuleToSemester(pg1);
+        s1.addModuleToSemester(ma1);
+        s1.addModuleToSemester(englisch);
+        s1.addModuleToSemester(bwl1);
+
+        // Create Adapter for modules in semester one
+        ModuleAdapter mAdapter = new ModuleAdapter(this, s1.getModuleList());
+
+        //Open new Activtity
+        // With the position object android knows which item in the list you've clicked
         listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent = new Intent(MainActivity.this, SemesterActivity.class);
+                System.out.println("POSITION: " + position);
                 startActivity(intent);
             }
         });
